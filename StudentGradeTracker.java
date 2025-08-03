@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -20,10 +19,14 @@ class Student {
         }else if (grade >= 80) {
             return "A"; 
         }else if (grade >= 70) {
-            return "B"; 
+            return "B+"; 
         }else if (grade >= 60) {
-            return "C"; 
+            return "B"; 
         }else if (grade >= 50) {
+            return "C+"; 
+        }else if (grade >= 40) {
+            return "C"; 
+        }else if (grade >= 35) {
             return "D"; 
         }else {
             return "F";
@@ -101,7 +104,7 @@ public class StudentGradeTracker {
 
             double grade;
             while (true) {
-                System.out.print("Enter grade for " + name + " (0–100): ");
+                System.out.print("Enter grade for " + name + " (0 - 100): ");
                 if (scanner.hasNextDouble()) {
                     grade = scanner.nextDouble();
                     scanner.nextLine(); // consume newline
